@@ -1,34 +1,31 @@
 import type { NextConfig } from "next";
+import { hostname } from "os";
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "placeimg.com",
-      },
-      {
-        protocol: "https",
-        hostname: "placehold.co",
-        port: "", // optional
-        pathname: "/**", // allow all paths 
-        },
-      {
-        protocol: "https",
-        hostname: "api.lorem.space",
-      },
-      {
-        protocol: "https",
-        hostname: "fakestoreapi.com",
-      },
-      {
-        protocol: "https",
-        hostname: "i.imgur.com",
-      },
-      {
-        protocol: "https",
-        hostname: "encrypted-tbn0.gstatic.com", // ✅ add this
-      },
+    domains: [
+     
+        "placeimg.com",
+      
+      
+        "placehold.co",
+       
+      
+     "api.lorem.space",
+      
+      
+   "fakestoreapi.com",
+      
+      
+       "i.imgur.com",
+      
+     
+       "encrypted-tbn0.gstatic.com",
+      
+      
+        
+     "imgur.com"
+      
     ],
   },
 };

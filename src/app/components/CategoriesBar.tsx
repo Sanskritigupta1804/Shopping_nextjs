@@ -21,11 +21,14 @@ export default function CategoriesBar({
 }: CategoriesBarProps) {
   const excluded = ["glasss", "multik", "Grosery", "Computer Category","vrwcdxsr42ed","Cars","t-shirt", "computers",
 "nature", "bread", "categoria 5"];
+const included = ["Clothes","Electronics",
+"Furniture", "Shoes", "Miscellaneous"
+]
 
   return (
     <div className="flex justify-center gap-4 py-4 bg-gray-50 shadow overflow-x-auto">
       {categories
-        .filter((cat) => !excluded.includes(cat.name))
+        .filter((cat) => included.includes(cat.name))
         .map((cat) => (
           <Button
             key={cat.id}
